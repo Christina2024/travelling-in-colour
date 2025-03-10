@@ -1,0 +1,31 @@
+{
+  "locations": [
+    {
+      "name": "London",
+      "temperature": "mild",
+      "sites": [
+        {
+          "name": "London Eye",
+          "decription": "blah blah",
+          "image": "london_eye.jpg"
+        },
+        {
+            "name": "Tower of London",
+            "decription": "blah blah",
+            "image": "london_tower.jpg"
+          }
+      ]
+    },
+    {
+      "name": "Paris",
+      "temperature": "mild",
+      "sites": [
+        {
+          "name": "London Eye",
+          "decription": "blah blah",
+          "image": "london_eye.jpg"
+        }
+      ]
+    }
+  ]
+}

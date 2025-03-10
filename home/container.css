@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+img {
+  width: 100%; /* To not take original width */
+  border-radius: 12px;
+  height: 214px;
+
+  object-fit: cover;
+}
+
+body {
+  background-color: #eaeff1;
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#container {
+  max-width: 300px;
+  margin: 0 auto; /* Center element */
+
+  margin-top: 20vh;
+}
+
+.card {
+  background-color: white;
+  padding: 8px;
+
+  border-radius: 12px;
+  border: 1px solid #bacd08;
+}
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
+
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-top: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #7f8c98;
+  line-height: 150%;
+}
+
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+
+  margin: 0 auto; /* To activate this element, have too add a block element. */
+  display: block;
+
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  background-color: #0077ff;
+  color: #e0efff;
+}
+
+.card_details {
+  padding: 16px 8px 8px 8px;
+}
