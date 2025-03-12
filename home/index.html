@@ -11,17 +11,23 @@
 </head>
 <body>
 <header class="flex align-items">
-    <div className="blogName" style="font-size: 1.5em;">
+    <div className="blogName";>
           <h1 class="aboreto-regular">Travelling<em> in </em>Colour </h1>
     </div>
-   
-    <div class="blogTabs flex">
-        <a href="../home/index.html" class="tabs no-underline aboreto-regular">Home</a>
-        <a href="../destinations/destination.html" class="tabs no-underline aboreto-regular">Destinations</a>
-        <a href="#" class="tabs no-underline aboreto-regular">Blog</a>
-        <a href="../Travelling tips/travelling_tips.html" class="tabs no-underline aboreto-regular">Travelling Tips</a>
-        <a href="../community/community.html" class="tabs no-underline aboreto-regular">Join the Tribe</a>
-    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../home/index.html" class="no-underline aboreto-regular">Home</a></li>
+            <li><a href="../destinations/destination.html" class="destinations no-underline aboreto-regular">Destinations</a></li>
+            <li><a href="../blog/blog.html" class="blog no-underline aboreto-regular">Blog</a></li>
+            <li><a href="../Travelling tips/travelling_tips.html" class="travelling-tips no-underline aboreto-regular">Travelling Tips</a></li>
+            <li><a href="../community/community.html" class="community no-underline aboreto-regular">Join the Tribe</a></li>
+        </ul>
+    </nav>
 </header>     
     
 <!--          ^^ WORK ON ABOVE FIRST  ^^           -->
@@ -29,30 +35,34 @@
 <main>
     <div class="introContainer ">
         <div class="introText">      
-            <p class="intro aboreto-regular"> <strong><em>Hey!  </em> <br/></br></strong> 
+            <p class="intro aboreto-regular"> <strong><em>Hi Chicas!  </em></strong></br></br>
                 Welcome to my blog where solo <strong>travelling</strong>  and <strong>in colour</strong> meets community!
-                <br/>
                 This community is built upon the interests and <em>some </em>curiousity (as newbies) for solo
                 travelling as women of colour. 
-                <br/>
-                </br>
-                This is a space where I like to express some adventures I have been, with advice of  outlookpros 
-                and cons for varied destinations. Learning to become unafraid of the unknown and be more self-reliant 
-                through solo-travelling has helped me to face my challenge of flying alone.
-                Being in a foreign country not speaking the native lnguage with no one around me has empowered me to
-                overcome self-doubt. </br> </br>
-                Life is a journey and the only way to explore is to get ten toes 
-                in and explore! 
-                As well as supporting our fellow sistas on their 
-                journeys.
-                </br>
-                </br>
+                <br/> </br>
+                To date, I have solo-travelled to over 10 countries, including Morocco, Portugal, and Egypt, Greece, amongst others. Ironically, my fear of flying is what pushed me to embark on these adventures 
+                alone. In the past, traveling with friends and family made me realize how much I relied on others to navigate 
+                unfamiliar places.
+                By stepping out of my comfort zone, I've not only conquered my fear of flights but also gained a strong sense 
+                of independence. Exploring different cultures on my own has enriched my understanding of the world, improved my 
+                social skills, and given me the confidence to handle any challenge that comes my way.
+                </br> 
+               
+                </br> 
+                Solo travelling especially as a woman can come with risks, not to mention if you're a woman of colour, there can be some 
+                locations that may come with general safety precautions, and social qeues -especially staring, to be concerned of in some countries. 
+                Which is why I created this space for us women to empower, encourage, and support each other.
+                Solo-travelling has helped me to face challenges and gain life lessons.
+                </br> 
+                You never know whats on the other side of life until you take the journey by the horns!  </br>
+                So let's go!
+                </br> </br>
                 Love Annitta ♡
                 </p> 
         </div>
 
     
-        <div>
+        <div class="introImg">
             <img
                 class="cliffImg" 
             
@@ -74,11 +84,14 @@
         <div class="card">
             <img src="../images/beach-selfie.jpg" class="card-img-top" alt="Image" height="476px" width="770px">
             <div class="card-body">
-                <h3 class="card-title aboreto-regular">Safe islands to travel as a woman</h3>
+                <h3 class="card-title aboreto-regular"> 
+                    Protective afro hairstyles + sun creams
+                </h3>
                 <p class="card-text aboreto-regular" >
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                    <br><br><br><br>
-                    Last updated 3 mins ago<br><br><br><br>
+                    As a <em>fine</em> black woman travelling on the go, creating the right hairstyle to suit the environment and humidity is 
+                    <em>as</em> important as the entire trip, sometimes it can make it or break it! So here...
+                    </br></br>
+                    <p class="updates">Last updated 3 mins ago</p></br></br>
                 </p>
                 <button class="read-more-btn" a href="../blog/blog.html">Read more</button>
             </div>
@@ -92,9 +105,9 @@
                 <h3 class="card-title aboreto-regular">9 days in cornwall</h3>
                 <p class="card-text aboreto-regular" >
                    Cornwall is renowned for its stunning coastline, beautiful beaches, and scenic countryside. 
-                   Cornwall Area is home to outstanding natural beauty and numerous coastal paths...
-                    <br><br>
-                    Last updated 1 day ago<br><br><br><br>
+                   The culture has a very relaxed approach versus living in London, <em>hence</em> the break sis. Let's get into it...
+                    </br></br>
+                    <p class="updates">Last updated 1 day ago</p></br></br>
                 </p>
                 <button class="read-more-btn" a href="../blog/blog.html">Read more</button>
             </div>
@@ -105,9 +118,10 @@
             <div class="card-body">
                 <h3 class="card-title aboreto-regular">20 ways to solo in Lisbon, Portugal</h3>
                 <p class="card-text aboreto-regular" >
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                    <br><br><br><br>
-                    Last updated 1 week ago<br><br><br><br>
+                    After devouring 3 petite Pastel de Nata's and surrendering to the sun's warmth embrace on my cocoa skin, I began to stroll down the cobbled 
+                    streets of Portugal's capital city, Lisbon <em>(or "Lis-boh-a" as pronounced by the Portugese)</em> in search... 
+                    </br></br>
+                    <p class="updates">Last updated 1 week ago</p></br></br>
                 </p>
                 <button class="read-more-btn" a href="../blog/blog.html">Read more</button>
             </div>
@@ -116,11 +130,12 @@
         <div class="card">
             <img src="../images/Santorini.jpg" class="card-img-top" alt="Santorini" height="476px" width="770px">
             <div class="card-body">
-                <h3 class="card-title aboreto-regular">Don't leave Santorini without visiting these spots</h3>
+                <h3 class="card-title aboreto-regular">Santorini! Santorini! Santorini!</h3>
                 <p class="card-text " >
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                    <br><br><br><br>
-                    Last updated 12 days ago<br><br><br>
+                    If you are curious about visiting Miss Santorini, but think it's just for couples.
+                    I have several female solo-friendly locations that will elevate your experience!
+                    </br></br>
+                    <p class="updates">Last updated 12 days ago</p></br></br>
                 </p>
                 <button class="read-more-btn" a href="../blog/blog.html">Read more</button>
             </div>
@@ -131,14 +146,7 @@
     <div class="blog-header-2">
         <h2 class="justify-center aboreto-regular">Solo travel 101</h2>
     </div>  
-
-  <!-- DESTINATIONS  
-
-    <img class="destinations" src="https://picsum.photos/id/1015/300/300" alt="a canyon and a lake">
-    <img class="destinations" src="https://picsum.photos/id/1016/300/300" alt="a canyon" style="--g: 20px;--b:5px;--c:#D95B43;">
-    <img class="destinations" src="https://picsum.photos/id/1015/300/300" alt="a canyon and a lake">
-    <img class="destinations" src="https://picsum.photos/id/1016/300/300" alt="a canyon" style="--g: 20px;--b:5px;--c:#D95B43;">
-     -->  
+ 
     <div class="grid">
         <h2>
             The thought of solo-travelling can be overwhelming for most. However, what it has shown me is a new form of 
@@ -148,7 +156,7 @@
             <ul> <li>Taking yourself out to eat alone</li> 
             <li>Visiting surrounding domestic cities by yourself</li>
             <li>Going to the cinemas by yourself</li>
-            to different states alone. I used to do this all the time before making my first international solo trip,
+            I used to do this all the time before making my first international solo trip,
              and it allowed me to build up confidence in navigating the world alone.
            </br>
            </br>
@@ -165,11 +173,10 @@
     <div class="blog-header-2">
         <h2 class="justify-center aboreto-regular">Travel Gallery</h2>
     </div> 
-    <div class="container";></div>
+    
 
        
     
-
         <div class="photo-gallery">
             <div class="column">
                 <div class="photo">
@@ -179,12 +186,12 @@
                     <img src="../images/camel.jpeg" alt="";>
                 </div>
                 <div class="photo">
-                    <img src="" alt="";>
+                    <img src="../images/Lisbon-tram.jpg" style="height: 600px; width: 1000px;" alt="";>
                 </div>
             </div>
 
 
-             <div class="column">
+            <div class="column">
                 <div class="photo">
                     <img src="../images/river-boat.jpeg" alt="">
                 </div> 
@@ -194,12 +201,10 @@
                 <div class="photo";>
                     <img src="../images/peace-sign.jpg" style="height: 45em"; alt="";>
                 </div> 
-               
-
             </div>
 
 
-             <div class="column">
+            <div class="column">
                 <div class="photo">
                     <img src="../images/quad.jpg" alt="">
                 </div>
@@ -207,9 +212,11 @@
                     <img src="../images/beach-selfie.jpg" alt="">
                 </div>
                 <div class="photo" >
-                    <img src="../images/drinkingImg.jpg" style="height: 45em" alt="">
+                    <img src="../images/drinkingImg.jpg" style="height: 600px"  width="400px">
                 </div>
-                 
+                 <div class="photo">
+                    <img src="../images/blue-boat.jpg" alt="">
+                </div>
             </div>
         </div>
 
@@ -240,7 +247,8 @@
                 <img class="tiktok-icon" src="../Vectors/bold and black icons/tik_tok_icon.svg">
                 <img class="facebook-icon" src="../Vectors/bold and black icons/facebook_icon.svg" alt="Facebook icon">
             </div>
-    </footer>
+    </footer> 
+    <script src="index.js"></script>
   </main> 
 </body>
 </html>
