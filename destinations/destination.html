@@ -4,46 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="destination.css" />
-    <title>Destinations | Travelling in Colour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Destinations| Travelling in Colour</title>
   </head>
   <body>
     <header class="flex align-items">
-      <div className="blogName" style="font-size: 1.5em">
+      <div className="blogName" ;>
         <h1 class="aboreto-regular">Travelling<em> in </em>Colour</h1>
       </div>
-
-      <div class="blogTabs flex">
-        <a href="../home/index.html" class="tabs no-underline aboreto-regular"
-          >Home</a
-        >
-        <a href="#" class="tabs no-underline aboreto-regular">Destinations</a>
-        <a href="../blog/blog.html" class="tabs no-underline aboreto-regular"
-          >Blog</a
-        >
-        <a
-          href="../Travelling tips/travelling_tips.html"
-          class="tabs no-underline aboreto-regular"
-          >Travelling Tips</a
-        >
-        <a
-          href="../community/community.html"
-          class="tabs no-underline aboreto-regular"
-          >Join the Tribe</a
-        >
-      </div>
-      <img
-        src="../Vectors/magnifying-glass-solid.svg"
-        class="magnifying-glass"
-        alt="magnifying glass"
-      />
+      <nav class="navbar">
+        <div class="logo">
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../home/index.html" class="no-underline aboreto-regular"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../destinations/destination.html"
+              class="destinations no-underline aboreto-regular"
+              >Destinations</a
+            >
+          </li>
+          <li>
+            <a
+              href="../blog/blog.html"
+              class="blog no-underline aboreto-regular"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Travelling tips/travelling_tips.html"
+              class="travelling-tips no-underline aboreto-regular"
+              >Travelling Tips</a
+            >
+          </li>
+          <li>
+            <a
+              href="../community/community.html"
+              class="community no-underline aboreto-regular"
+              >Join the Tribe</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
+    <div class="container">
+      <h2>Find Your Next Holiday!</h2>
+      <p>Click the button to get a random holiday idea.</p>
+      <button onclick="generateHoliday()">Generate Holiday</button>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function generateHoliday() {
+        const holidays = {
+          "Beach Holidays": ["Maldives", "Hawaii", "Bali", "Phuket", "Bahamas"],
+          "City Escapes": ["Paris", "New York", "Tokyo", "London", "Barcelona"],
+          "Adventurous Escapes": [
+            "Patagonia",
+            "Swiss Alps",
+            "Grand Canyon",
+            "Amazon Rainforest",
+            "New Zealand",
+          ],
+          "Exotic Holidays": [
+            "Marrakech",
+            "Bora Bora",
+            "Fiji",
+            "Seychelles",
+            "Santorini",
+          ],
+        };
+
+        const categories = Object.keys(holidays);
+        const randomCategory =
+          categories[Math.floor(Math.random() * categories.length)];
+        const randomDestination =
+          holidays[randomCategory][
+            Math.floor(Math.random() * holidays[randomCategory].length)
+          ];
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `🌍 <strong>${randomCategory}</strong>: ${randomDestination}`;
+      }
+    </script>
     <footer>
       <div>
         <p class="copyright">
           © 2025 Travel in Colour | Powered by HTML and CSS
         </p>
       </div>
+      <!--
       <div class="socialIcons flex justify-center align-items">
         <img
           class="icon"
@@ -64,7 +127,7 @@
           src="../Vectors/medium vectors/facebook-rounded-border-svgrepo-com.svg"
           alt="Facebook icon"
         />
-      </div>
+      </div> -->
     </footer>
     <script src="destinations.js"></script>
   </body>

@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:wght@300&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 body {
-  margin: 0;
-  padding: 0px 50px;
+  padding: 0px 5px;
+  margin: 20px;
+  background-color: #ffffff;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .flex {
@@ -39,12 +47,32 @@ header {
   height: 10%;
   background-color: #333;
   color: #fff;
-  padding: 5px 0 0 2%;
+  padding: 1% 0 0 2%;
 }
 
-.blogTabs {
+.blogName {
+  font-size: 1.5em;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline;
   margin-top: 0;
-  margin-left: 8rem;
+  margin-left: 15rem;
   min-height: 3rem;
   display: flex;
   justify-content: center;
@@ -52,51 +80,117 @@ header {
   font-family: aboreto-regular;
 }
 
-.tabs {
-  color: rgb(0, 0, 0);
-  margin: 0px;
-  padding: 1% 35px;
-  background-color: #fa7c21;
-  font-size: 1.5rem;
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }
-
-.tabs:hover {
+.nav-links li:hover {
   color: #ffffff;
-  text-decoration: underline 5px;
+  text-decoration: underline 5px #fa7c21;
   cursor: pointer;
 }
-
-.blog-header {
-  /* background-color: #fa7c21; */
-  text-decoration: overline 2px #fa7c21;
-  max-width: 30ch;
-  margin: auto;
-  padding: 9px 30px;
-  border-radius: 5%;
-  font-family: aboreto-regular;
-  font-size: 1em;
-  border-style: outset;
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
 }
 
-.magnifying-glass {
-  width: 25%;
-  height: 20%;
+.hamburger:hover {
+  opacity: 50%;
+}
+.blog-text {
+  font-size: 1.5em;
+  margin: 30px;
+  font-family: "Cormorant Garamond", serif;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  padding-right: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  top: 400px;
+  font-size: 1vw;
+  /*margin-top: 20vw;*/
+}
+.text-area {
+  border: 20px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.post {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.post-btn {
+  padding: 5px;
+  background-color: #fa7c21;
+  margin: 0 auto; /* #e0efff To activate this element, have too add a block element. */
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  cursor: pointer;
+}
+.post-btn:hover {
+  background-color: #000000;
   color: #ffffff;
+}
+.comments {
+  margin-left: 20px;
+  font-size: 0.9em;
+}
+.comment {
+  padding: 5px;
+  background: #e9e9e9;
+  margin: 5px 0;
+}
+.copyright {
+  display: inline-flex;
+  justify-content: space-around left;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
 }
 
 .socialIcons {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  margin-left: 40%;
+  height: 2px;
+  margin-left: 14%;
+  cursor: pointer;
 }
-.icon {
+
+.instagram-icon:hover,
+.youtube-icon:hover,
+.tiktok-icon:hover,
+.facebook-icon:hover {
+  opacity: 50%;
+}
+
+.instagram-icon,
+.youtube-icon,
+.tiktok-icon,
+.facebook-icon {
   max-width: 40 px;
   max-height: 40px;
   padding: 10px 20px;
 }
 
 footer {
-  display: flex;
-  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }

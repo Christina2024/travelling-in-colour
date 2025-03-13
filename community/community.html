@@ -4,72 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="community.css" />
-    <title>Join the Tribe | Travelling in Colour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Join the Tribe| Travelling in Colour</title>
   </head>
   <body>
-        <header class="flex align-items">
-          <div className="blogName" style="font-size: 1.5em">
-            <h1 class="aboreto-regular">Travelling<em> in </em>Colour</h1>
-          </div>
+    <header class="flex align-items">
+      <div className="blogName" ;>
+        <h1 class="aboreto-regular">Travelling<em> in </em>Colour</h1>
+      </div>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../home/index.html" class="no-underline aboreto-regular"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../destinations/destination.html"
+              class="destinations no-underline aboreto-regular"
+              >Destinations</a
+            >
+          </li>
+          <li>
+            <a
+              href="../blog/blog.html"
+              class="blog no-underline aboreto-regular"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Travelling tips/travelling_tips.html"
+              class="travelling-tips no-underline aboreto-regular"
+              >Travelling Tips</a
+            >
+          </li>
+          <li>
+            <a
+              href="../community/community.html"
+              class="community no-underline aboreto-regular"
+              >Join the Tribe</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-          <nav class="navbar">
-            <div class="logo">
-              <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-            </div>
-            <ul class="nav-links">
-              <li>
-                <a href="../home/index.html" class="no-underline aboreto-regular"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../destinations/destination.html"
-                  class="destinations no-underline aboreto-regular"
-                  >Destinations</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../blog/blog.html"
-                  class="blog no-underline aboreto-regular"
-                  >Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../Travelling tips/travelling_tips.html"
-                  class="travelling-tips no-underline aboreto-regular"
-                  >Travelling Tips</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../community/community.html"
-                  class="community no-underline aboreto-regular"
-                  >Join the Tribe</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </header>
-        
-          <form>
-            <h2>Contact form</h2>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-              
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              
-              <label for="contact">Contact Number:</label>
-              <input type="text" id="contact" name="contact" required>
-              
-              <button type="submit">Submit</button>
-          </form>
+    <form>
+      <h1 style="text-align: center; font-size: 2.5em;">Join the Tribe!</h1>
+      <h2 style="font-size: 2em">Contact form</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
-    
-      <script src="/home/index.js"></script>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="contact">Contact Number:</label>
+      <input type="text" id="contact" name="contact" required />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <div>
+        <p class="copyright">
+          © 2025 Travel in Colour | Powered by HTML and CSS
+        </p>
+      </div>
+      <!--
+      <div class="socialIcons flex justify-center align-items">
+        <img
+          class="icon"
+          src="../Vectors/medium vectors/instagram-svgrepo-com.svg"
+          alt="Instagram icon"
+        />
+        <img
+          class="icon"
+          src="../Vectors/medium vectors/youtube-svgrepo-com.svg"
+          alt="youtube icon"
+        />
+        <img
+          class="icon"
+          src="../Vectors/bold and black icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+        />
+        <img
+          class="icon"
+          src="../Vectors/medium vectors/facebook-rounded-border-svgrepo-com.svg"
+          alt="Facebook icon"
+        />
+      </div> -->
     </footer>
+    <script src="/home/index.js"></script>
   </body>
 </html>

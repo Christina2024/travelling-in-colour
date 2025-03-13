@@ -4,69 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="blog.css" />
-    <title>Blog | Travelling in Colour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog| Travelling in Colour</title>
   </head>
   <body>
     <header class="flex align-items">
-      <div className="blogName" style="font-size: 1.5em">
+      <div className="blogName" ;>
         <h1 class="aboreto-regular">Travelling<em> in </em>Colour</h1>
       </div>
-
-      <div class="blogTabs flex">
-        <a href="../home/index.html" class="tabs no-underline aboreto-regular"
-          >Home</a
-        >
-        <a
-          href="../destinations/destination.html"
-          class="tabs no-underline aboreto-regular"
-          >Destinations</a
-        >
-        <a href="#" class="tabs no-underline aboreto-regular">Blog</a>
-        <a
-          href="../Travelling tips/travelling_tips.html"
-          class="tabs no-underline aboreto-regular"
-          >Travelling Tips</a
-        >
-        <a
-          href="../community/community.html"
-          class="tabs no-underline aboreto-regular"
-          >Join the Tribe</a
-        >
-      </div>
-      <img
-        src="../Vectors/magnifying-glass-solid.svg"
-        class="magnifying-glass"
-        alt="magnifying glass"
-      />
+      <nav class="navbar">
+        <div class="logo">
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../home/index.html" class="no-underline aboreto-regular"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../destinations/destination.html"
+              class="destinations no-underline aboreto-regular"
+              >Destinations</a
+            >
+          </li>
+          <li>
+            <a
+              href="../blog/blog.html"
+              class="blog no-underline aboreto-regular"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Travelling tips/travelling_tips.html"
+              class="travelling-tips no-underline aboreto-regular"
+              >Travelling Tips</a
+            >
+          </li>
+          <li>
+            <a
+              href="../community/community.html"
+              class="community no-underline aboreto-regular"
+              >Join the Tribe</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
+
+    <!-- Blog input-->
+    <div class="container">
+      <h1 style="height: 1em">Blog a post</h1>
+      <p class="blog-text" style="text-align: center">
+        Feel free to share nuggets of info and empower others on your travelling
+        journeys! ✌︎
+      </p>
+      <input
+        type="text"
+        id="postTitle"
+        placeholder="Post Title"
+        style="width: 100%; padding: 8px"
+      />
+      <textarea
+        class="text-area"
+        id="postContent"
+        placeholder="Write your post here..."
+        style="width: 100%; padding: 8px; height: 100px"
+      ></textarea>
+      <button class="post-btn" onclick="addPost()">Post</button>
+
+      <div id="posts"></div>
+    </div>
 
     <footer>
       <div>
         <p class="copyright">
-          © 2025 Travel in Colour | Powered by HTML and CSS
+          © 2025 Travel in Colour | Powered by HTML and CSS | Created by
+          Christina Johnson
         </p>
       </div>
       <div class="socialIcons flex justify-center align-items">
         <img
-          class="icon"
-          src="../Vectors/medium vectors/instagram-svgrepo-com.svg"
+          class="instagram-icon"
+          src="../Vectors/bold and black icons/instagram_monochrome_icon.svg"
           alt="Instagram icon"
         />
         <img
-          class="icon"
-          src="../Vectors/medium vectors/youtube-svgrepo-com.svg"
+          class="youtube-icon"
+          src="../Vectors/bold and black icons/youtube_icon.svg"
           alt="youtube icon"
         />
         <img
-          class="icon"
-          src="../Vectors/bold and black icons/tiktok-icon-white-1-logo-svgrepo-com.svg"
+          class="tiktok-icon"
+          src="../Vectors/bold and black icons/tik_tok_icon.svg"
+          alt="tiktok icon"
         />
         <img
-          class="icon"
-          src="../Vectors/medium vectors/facebook-rounded-border-svgrepo-com.svg"
+          class="facebook-icon"
+          src="../Vectors/bold and black icons/facebook_icon.svg"
           alt="Facebook icon"
         />
       </div>
     </footer>
+
+    <script>
+      function addPost() {
+        let title = document.getElementById("postTitle").value;
+        let content = document.getElementById("postContent").value;
+        if (title.trim() === "" || content.trim() === "") {
+          alert("Please enter both title and content");
+          return;
+        }
+
+        let postDiv = document.createElement("div");
+        postDiv.classList.add("post");
+        postDiv.innerHTML = `<h3>${title}</h3><p>${content}</p>
+                <button onclick="addComment(this)">Add Comment</button>
+                <input type='text' placeholder='Write a comment...' class='commentInput'>
+                <div class='comments'></div>`;
+
+        document.getElementById("posts").prepend(postDiv);
+        document.getElementById("postTitle").value = "";
+        document.getElementById("postContent").value = "";
+      }
+
+      function addComment(button) {
+        let commentInput = button.nextElementSibling;
+        let commentText = commentInput.value;
+        if (commentText.trim() === "") {
+          alert("Please enter a comment");
+          return;
+        }
+
+        let commentDiv = document.createElement("div");
+        commentDiv.classList.add("comment");
+        commentDiv.innerText = commentText;
+
+        button.nextElementSibling.nextElementSibling.appendChild(commentDiv);
+        commentInput.value = "";
+      }
+    </script>
   </body>
 </html>

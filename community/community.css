@@ -103,7 +103,7 @@ header {
   opacity: 50%;
 }
 body {
-  font-family: aboreto-regular;
+  font-family: "Cormorant Garamond", serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,6 +116,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 input[type="text"],
@@ -141,4 +142,47 @@ button:hover {
 form {
   border: #fa7c21 solid 20px;
   padding: 10%;
+  padding-top: 10px;
+}
+.copyright {
+  display: inline-flex;
+  justify-content: space-around left;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 2px;
+  margin-left: 14%;
+  cursor: pointer;
+}
+
+.instagram-icon:hover,
+.youtube-icon:hover,
+.tiktok-icon:hover,
+.facebook-icon:hover {
+  opacity: 50%;
+}
+
+.instagram-icon,
+.youtube-icon,
+.tiktok-icon,
+.facebook-icon {
+  max-width: 40 px;
+  max-height: 40px;
+  padding: 10px 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
